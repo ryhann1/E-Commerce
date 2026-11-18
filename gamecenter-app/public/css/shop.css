@@ -1,0 +1,187 @@
+/* ==========================================================
+   STOREA — tambahan untuk toko (dimuat setelah style.css)
+   ========================================================== */
+
+/* ---------- Navigasi ---------- */
+.brand-link { color: #fff; text-decoration: none; }
+.brand-link:hover { color: #fff; }
+.nav-item { transition: background .15s; }
+.nav-item:not(.is-active):not(.is-soon):hover { background: var(--olive-700); color: #fff; }
+.nav-badge {
+    margin-left: auto; background: var(--brown); color: #fff; font-size: 12px;
+    font-weight: 800; border-radius: 999px; padding: 1px 9px;
+}
+.nav-sep { height: 1px; background: var(--olive-700); margin: 8px 6px; }
+
+/* ---------- Topbar & pencarian ---------- */
+.searchbar {
+    flex: 1 1 320px; max-width: 560px; display: flex; align-items: center; gap: 10px;
+    background: var(--paper); border: 1px solid var(--line); border-radius: 14px;
+    padding: 4px 4px 4px 16px; color: var(--muted);
+}
+.searchbar { min-width: 0; }
+.searchbar svg, .searchbar .btn { flex: none; }
+.searchbar input {
+    flex: 1; width: 0; min-width: 0; height: 44px; border: 0; background: transparent;
+    font: inherit; color: var(--ink); outline: none;
+}
+.searchbar:focus-within { border-color: var(--sage-300); box-shadow: 0 0 0 3px var(--sage-200); }
+
+/* ---------- Umum ---------- */
+.page-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
+.page-title { font-size: 28px; font-weight: 800; color: var(--olive-900); letter-spacing: -.01em; }
+.page-sub { color: var(--muted); font-size: 15px; margin-top: 2px; }
+.stack { display: flex; flex-direction: column; gap: 16px; }
+.hint { font-size: 13px; color: var(--muted); }
+.crumbs { font-size: 14px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 8px; }
+
+.flash { border-radius: 12px; padding: 12px 16px; font-weight: 600; font-size: 14px; }
+.flash-success { background: var(--sage-100); color: var(--olive-900); border: 1px solid var(--sage-300); }
+.flash-error { background: var(--danger-bg); color: var(--danger); }
+
+.empty {
+    background: var(--paper); border: 1px dashed var(--sage-300); border-radius: 20px;
+    padding: 40px 24px; text-align: center; display: flex; flex-direction: column;
+    align-items: center; gap: 12px; color: var(--muted);
+}
+
+a.chip { text-decoration: none; }
+a.chip:hover { background: var(--sage-100); }
+.chip.is-active { background: var(--olive-700); color: #fff; border-color: var(--olive-700); }
+
+.btn-danger { background: transparent; border-color: var(--danger); color: var(--danger); }
+.btn-danger:hover { background: var(--danger-bg); color: var(--danger); }
+.btn[disabled] { opacity: .5; cursor: not-allowed; }
+.hero .btn-outline { border-color: var(--sage-200); color: #fff; }
+.hero .btn-outline:hover { background: var(--olive-800); color: #fff; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 4px; }
+
+/* ---------- Kartu produk ---------- */
+.product-card { display: flex; flex-direction: column; }
+.product-thumb { text-decoration: none; }
+a.product-name { color: var(--ink); text-decoration: none; }
+a.product-name:hover { color: var(--brown); }
+.product-stock { font-size: 13px; color: var(--muted); }
+.product-card .product-body { flex: 1; }
+.product-actions { display: flex; gap: 8px; margin-top: auto; padding-top: 12px; }
+.product-actions form { margin: 0; flex: 1.4; }
+.product-actions > .btn { flex: 1; }
+.product-actions .btn { padding: 0 10px; font-size: 13px; white-space: nowrap; width: 100%; }
+
+.filters { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
+.sort-form { display: flex; align-items: center; gap: 8px; margin: 0; font-size: 14px; color: var(--muted); }
+.sort-form select { min-height: 44px; border-radius: 10px; border: 1px solid var(--line); background: #fff; padding: 0 10px; font: inherit; color: var(--ink); }
+
+/* ---------- Detail produk ---------- */
+.detail { display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-start; }
+.detail-art {
+    flex: 1 1 320px; min-height: 340px; border-radius: 24px; background: var(--sage-100);
+    border: 1px solid var(--line); display: grid; place-items: center; color: var(--olive-800);
+}
+.detail-info { flex: 1 1 340px; display: flex; flex-direction: column; gap: 16px; }
+.detail-info h1 { font-size: 32px; line-height: 1.15; letter-spacing: -.02em; color: var(--olive-900); }
+.price-big { font-size: 32px; font-weight: 800; color: var(--brown); }
+.buy-form { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin: 0; }
+.qty-input {
+    width: 84px; height: 48px; border-radius: 12px; border: 1.5px solid var(--line);
+    padding: 0 10px; font: inherit; text-align: center; background: #fff; color: var(--ink);
+}
+.qty-input.sm { width: 72px; height: 44px; }
+
+/* ---------- Keranjang & checkout ---------- */
+.split { display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start; }
+.split-main { flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 14px; }
+.split-side { flex: 1 1 320px; min-width: 0; }
+
+.row-card {
+    background: var(--paper); border: 1px solid var(--line); border-radius: 16px; padding: 16px;
+    display: flex; flex-wrap: wrap; align-items: center; gap: 16px;
+}
+.row-thumb {
+    width: 72px; height: 72px; border-radius: 14px; background: var(--sage-100);
+    display: grid; place-items: center; color: var(--olive-800); flex: none;
+}
+.row-info { flex: 1 1 200px; display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.row-info a { color: var(--ink); text-decoration: none; font-weight: 700; }
+.row-info a:hover { color: var(--brown); }
+.row-price { min-width: 110px; text-align: right; font-weight: 800; color: var(--olive-900); }
+.row-actions {
+    flex-basis: 100%; display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
+    border-top: 1px solid var(--sage-100); padding-top: 12px;
+}
+.inline-form { display: flex; align-items: center; gap: 8px; margin: 0; }
+
+.summary {
+    background: var(--olive-800); color: #fff; border-radius: 20px; padding: 24px;
+    display: flex; flex-direction: column; gap: 14px;
+}
+.summary h2 { font-size: 20px; font-weight: 800; }
+.summary .line { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-size: 15px; color: var(--sage-100); }
+.summary .line span { min-width: 0; }
+.summary .line strong { white-space: nowrap; }
+.summary .total { font-size: 22px; font-weight: 800; color: #fff; border-top: 1px solid var(--olive-600); padding-top: 14px; }
+.summary .total strong { color: #e6c27a; }
+.summary .btn-brown:hover { background: #9c6a37; }
+
+/* ---------- Form ---------- */
+.form-card { background: var(--paper); border: 1px solid var(--line); border-radius: 20px; padding: 24px; }
+.form-row { display: flex; flex-wrap: wrap; gap: 16px; }
+.form-row .field { flex: 1 1 200px; min-width: 0; }
+.control {
+    width: 100%; min-height: 48px; border-radius: 12px; border: 1.5px solid var(--line);
+    background: #fff; padding: 0 14px; font: inherit; color: var(--ink);
+}
+textarea.control { padding: 12px 14px; min-height: 100px; resize: vertical; }
+.control.is-invalid { border-color: var(--danger); }
+.form-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* ---------- Status & pesanan ---------- */
+.badge { white-space: nowrap; }
+td.nowrap { white-space: nowrap; }
+.stat-num { white-space: nowrap; }
+.badge-wait { background: #f3e3b8; color: #5a3f08; }
+.badge-proc { background: #d9e4ef; color: #16324a; }
+.badge-ship { background: var(--sage-200); color: var(--olive-900); }
+.badge-done { background: var(--olive-800); color: #fff; }
+.badge-cancel { background: var(--danger-bg); color: var(--danger); }
+
+.order-card { background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 20px 24px; display: flex; flex-direction: column; gap: 14px; }
+.order-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; }
+.order-code { font-size: 17px; font-weight: 800; color: var(--olive-900); }
+.order-meta { font-size: 13px; color: var(--muted); }
+.order-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; border-top: 1px solid var(--sage-100); padding-top: 14px; }
+.order-total { font-size: 19px; font-weight: 800; color: var(--olive-900); }
+.order-lines { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 4px; font-size: 14px; }
+
+.success-banner {
+    background: var(--olive-700); color: #fff; border-radius: 20px; padding: 28px;
+    display: flex; flex-wrap: wrap; align-items: center; gap: 16px;
+}
+.success-banner .stat-icon { background: var(--olive-600); color: #fff; width: 56px; height: 56px; }
+.success-banner p { color: var(--sage-100); }
+
+/* ---------- Tabel admin ---------- */
+.cell-prod { display: flex; align-items: center; gap: 12px; }
+.cell-thumb { width: 44px; height: 44px; border-radius: 10px; background: var(--sage-100); color: var(--olive-800); display: grid; place-items: center; flex: none; }
+.actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.actions form { margin: 0; }
+.status-form { display: flex; align-items: center; gap: 8px; margin: 0; }
+.status-form select { min-height: 44px; border-radius: 10px; border: 1px solid var(--line); background: #fff; padding: 0 10px; font: inherit; color: var(--ink); }
+.low-stock { color: var(--danger); font-weight: 800; }
+
+/* ---------- Login ---------- */
+.role-list { display: flex; flex-direction: column; gap: 12px; }
+.role-list form { margin: 0; }
+.role-btn {
+    display: flex; align-items: center; gap: 14px; width: 100%; text-align: left; padding: 14px 16px;
+    border-radius: 14px; border: 1.5px solid var(--line); background: #fff; font: inherit;
+    color: var(--ink); cursor: pointer; transition: border-color .15s, background .15s;
+}
+.role-btn:hover { border-color: var(--olive-600); background: var(--sage-100); }
+.role-btn strong { display: block; color: var(--olive-900); }
+.role-btn small { color: var(--muted); font-size: 13px; }
+
+@media (max-width: 860px) {
+    .nav-sep { display: none; }
+    .page-title { font-size: 24px; }
+}
